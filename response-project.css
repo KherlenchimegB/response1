@@ -1,0 +1,76 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.body {
+  display: flex;
+  justify-content: center;
+  background-color: black;
+  color: white;
+}
+.main {
+  height: 2096px;
+  width: 1218px;
+  max-height: 2096px;
+  max-width: 1218px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 400px;
+  gap: 16px;
+  margin-top: 96px;
+}
+.border-red {
+  border: 1px solid yellow;
+}
+.main > div {
+  border-radius: 80px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.photo1 {
+  background-image: url(./111.jpg);
+}
+.photo2 {
+  grid-column: 2 / span 2;
+  background-image: url(./222.jpg);
+}
+.photo3 {
+  grid-column: 1 / span 2;
+  background-image: url(./333.jpg);
+}
+.photo4 {
+  grid-column: 3/4;
+  grid-row: 2 / span 2;
+  background-image: url(./444.jpg);
+}
+.photo5 {
+  /* grid-column: 1/2; */
+  grid-row: 3 / span 2;
+  background-color: rgb(17, 44, 35);
+}
+.photo6 {
+  background-color: rgb(44, 17, 41);
+}
+.photo7 {
+  grid-column: 2 / span 2;
+  /* grid-row: 4/5; */
+  background-color: rgb(205, 133, 10);
+}
+.photo8 {
+  grid-column: 1 / span 2;
+  /* grid-row: 5/6; */
+  background-color: rgb(10, 205, 205);
+}
+.photo9 {
+  background-color: rgb(44, 17, 41);
+}
+@media screen and (max-width: 768px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .main > div {
+    grid-columns: 1/2;
+  }
+}
